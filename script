@@ -1,0 +1,4 @@
+docker build -t node-app:lts .
+docker login -u $USERNAME -p $PASSWORD
+docker push node-app:lts
+docker run -d -p 3000:3000 --name node-app ahmad90/node-app:lts
